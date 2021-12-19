@@ -1,0 +1,26 @@
+Backend Song I/O and Reccomendation Social Network
+
+Reads song metadata from a directory
+Data Structures:
+-Max Heap
+-BSTree
+-Undirected Graph with V = users and E = friendships
+
+Algorithms:
+-BSTree management (add leaf, remove, print, etc.) // O(n)
+-BSTree search // O(logn)
+-Max Heap extract max / increase key / maxHeapify // O(logn)
+-Djikstra's algorithm // O(|E|log|V|)
+
+Interface:
+-exit
+-add user [username]
+-friend [username] [username]
+-unfriend [username] [username]
+-listen [username] [song_title] [<n>] //n = #listens, increases song's listen count for the user
+-set radius [<k>] //k = degree of friends to consider for reccomendations
+-reccomend [<n>]//adds n most popular songs from friend's most listened to songs to primary user's library
+-remove song [song_title]//remove song from primary user's library
+-show songs //show primary user's music library
+-show friends [user_name]
+-show system //show the most popular songs among primary_user's friends to k'th degree radius
